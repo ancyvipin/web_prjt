@@ -79,44 +79,22 @@
     margin: 1px 5px  2px 20px;
 }
 
-/* -------------------- */
-/* MOBILE FIXES */
-/* -------------------- */
-@media(max-width:992px){
-    /* Adjust spacing for tablets/smaller desktops */
-    .prdt_card{
-        flex: 0 0 33.33%; /* Show 3 items on a tablet screen */
-    }
-}
 
 @media(max-width:600px){
-    .featured_section{
-        margin: 40px 10px; /* Smaller margins for small screens */
-    }
-
+    
     /* FIX 4: Correctly target the flex item for size and simplify padding */
     .featured_prdts{
-        gap: 15px; /* Smaller gap */
-        padding-left: 30px; /* Adjust padding for smaller arrows/screens */
-        padding-right: 30px;
+        
     }
 
     .prdt_card{
-        /* FIX: Show 1 product card at a time on mobile */
-        flex: 0 0 80%; /* Takes up 80% of the viewport width, allowing a peek at the next card */
-        min-width: unset; /* Allow the flex percentage to take over */
+       
+        flex: 0 0 90%; /* Takes up 80% of the viewport width, allowing a peek at the next card */
+    
     }
 
-    /* Remove the following block from the original code as it was incorrectly targeting the inner wrapper for flex basis: */
-    /*
-    .img_name_wrap{
-        flex: 0 0 calc(50%-5px);
-        padding: 15px;
-    }
-    */
     .image_container img{
         max-height: 200px; /* Smaller max-height for images */
-        width: 100%; /* Ensure it's responsive */
         padding: 15px;
     }
     .left_arrow, .right_arrow{
@@ -124,5 +102,9 @@
     }
     .featured_btns{
         padding: 0 10px;
+    }
+    .prdt_card h4,
+    .prdt_card p{
+        text-align: center;
     }
 }

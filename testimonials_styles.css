@@ -1,52 +1,47 @@
 /* Testimonials Section */
-.testimonials-section {
-    padding: 60px 80px;
-    text-align: left;
-}
-.testimonial-head{
+.testimonial-section {
+    margin: 80px auto;
+    width: 90%;
+    background: #fff;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  .test-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-}
-.section-title {
+  }
+  
+  .test-header h2 {
     font-size: 30px;
     font-weight: 700;
     color: #20124d;
-}
-
-.arrow_container{
+  }
+  
+  .test-row {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-}
-.test_arrow_left,
-.test_arrow_right{
-
-    z-index: 10;
-    position: absolute;
-}
-.test_arrow_left{
-    left: -30px;
-}
-.test_arrow_right{
-   right: -30px;
-}
-.testimonials-container {
-   overflow: hidden;
-   flex: 1;
-}
-.testimonial-carousel{
+  }
+  
+  .test-carousel-wrapper {
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  .test-carousel {
     display: flex;
-        gap: 30px;
-        transition: transform 0.4s  ease;
-        padding: 20px 0;
-        align-items: stretch;
-}
-
-.testimonial-card {
-    flex: 0 0 calc(33.33% - 60px);
+    gap: 30px;
+    transition: transform 0.4s ease;
+    padding: 20px 0;
+    align-items: stretch;
+  }
+  
+  .test-card {
+    flex: 0 0 calc(30.33% - 20px);
     border-radius: 17.19px;
     background: #f1f1f1;
     padding: 20px;
@@ -57,70 +52,125 @@
     min-height: 233px;
     min-width: 349px;
     text-align: left;
-    
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-}
-
-.testimonial-text {
-    font-size: 1.2em;
-    line-height: 1.6;
+    /* margin-right: 30px; */
+  }
+  
+  .test-card img {
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+  }
+  
+  .test-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .test-card p {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 325;
+    letter-spacing: -3%;
+    color: #555555;
     margin-bottom: 20px;
-    color: #555;
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: #333;
-    font-size: 0.95em;
-}
-
-.nav-button {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-grow: 0.5;
+  }
+  
+  .test_arrow {
+   
+    border: none;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    font-size: 1.1em;
-    color: #555;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: #007bff; /* Example hover color */
-    color: #fff;
-    border-color: #007bff;
-}
-/* @media(min-width:600px){
-    .section-title{
-        text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 10px #fff;
+  }
+  
+  .test_arrow:hover {
+    background: #2a1b63;
+  }
+  
+  .test_arrow.left {
+    position: absolute;
+    right: 100%;
+  }
+  
+  .test_arrow.right {
+    position: absolute;
+    /* left: 98%; */
+    left: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .testimonial-section {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 40px auto;
     }
-    .testimonials-container{
-        padding: 10% 20%;
-        justify-content: flex-start;
-        overflow: hidden;
+  
+    .test-header h2 {
+      font-size: 22px;
+      text-align: center;
     }
-    .arrow_container{
-        position: relative;
-
+  
+    .test-carousel {
+      gap: 15px;
+      padding: 10px 0;
+      padding-left: 10px;
     }
-    .testimonial-card{
-        flex: 0 0 90%;
-        max-width: 85%;
-        max-height: 200px;
-        margin: 0 auto;
+  
+    .test-card {
+      flex: 0 0 88%;
+      padding: 30px;
+      min-width: unset;
+      min-height: auto;
+      text-align: center;
     }
-    .test_arrow_left{
-        left: -80px;
+  
+    
+  
+    .test-card h3 {
+      font-size: 0.9rem;
     }
-    .test_arrow_right{
-        right: -80px;
+  
+    .test-card p {
+      font-size: 0.8rem;
+      margin: 15px 5px;
     }
-} */
+  
+    .test_arrow {
+      background: #1b2d5a;
+      color: white;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .test_arrow.left {
+      left: -10px;
+      right: auto;
+    }
+  
+    .test_arrow.left {
+      right: -10px;
+      left: auto;
+    }
+  }
