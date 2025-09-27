@@ -1,0 +1,128 @@
+/*featured section*/
+.featured_section{
+    padding-left: 80px;
+    padding-right: 50px;
+    margin: 80px auto;
+}
+.featured_btns{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.list_div{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+}
+.left_arrow{
+    position: absolute;
+    left: 5px;
+   
+}
+.right_arrow{
+    position: absolute;
+    right: 5px;
+}
+.left_arrow img,
+.right_arrow img{
+    min-width: 4%;
+}
+.featured_prdts{
+   overflow: hidden;
+   flex: 1;
+}
+.prdt_carousel{
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s ease;
+    padding: 10px 0;
+}
+.prdt_card{
+    flex: 0 0 calc(25% - 55px);
+    border-radius: 17.19px;
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+}
+
+.image_container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.featured_img{
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    max-height: 350px;
+
+    object-fit: contain;
+}
+.prdt_card p{
+    font-size: 0.9rem;
+    color: #666;
+    text-align: left;
+    margin: 0 0 0 20px;
+}
+.prdt_card h4{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #20124d;
+    text-align: left;
+    margin: 1px 5px  2px 20px;
+}
+
+/* -------------------- */
+/* MOBILE FIXES */
+/* -------------------- */
+@media(max-width:992px){
+    /* Adjust spacing for tablets/smaller desktops */
+    .prdt_card{
+        flex: 0 0 33.33%; /* Show 3 items on a tablet screen */
+    }
+}
+
+@media(max-width:600px){
+    .featured_section{
+        margin: 40px 10px; /* Smaller margins for small screens */
+    }
+
+    /* FIX 4: Correctly target the flex item for size and simplify padding */
+    .featured_prdts{
+        gap: 15px; /* Smaller gap */
+        padding-left: 30px; /* Adjust padding for smaller arrows/screens */
+        padding-right: 30px;
+    }
+
+    .prdt_card{
+        /* FIX: Show 1 product card at a time on mobile */
+        flex: 0 0 80%; /* Takes up 80% of the viewport width, allowing a peek at the next card */
+        min-width: unset; /* Allow the flex percentage to take over */
+    }
+
+    /* Remove the following block from the original code as it was incorrectly targeting the inner wrapper for flex basis: */
+    /*
+    .img_name_wrap{
+        flex: 0 0 calc(50%-5px);
+        padding: 15px;
+    }
+    */
+    .image_container img{
+        max-height: 200px; /* Smaller max-height for images */
+        width: 100%; /* Ensure it's responsive */
+        padding: 15px;
+    }
+    .left_arrow, .right_arrow{
+        top: 45%; /* slightly adjust arrow position */
+    }
+    .featured_btns{
+        padding: 0 10px;
+    }
+}

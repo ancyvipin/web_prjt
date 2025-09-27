@@ -1,0 +1,98 @@
+/*Draging elements style*/
+.prdts_list{
+ justify-content: space-between; 
+ gap: 0;
+}
+.arrow_wrap{
+    display: flex; 
+   align-items: center;
+  justify-content: space-between;
+}
+.items-wrapper {
+  overflow-x: hidden; /* Enables horizontal scrolling */
+  flex: 1;
+ 
+}
+.left-arrow,
+.right-arrow{
+  min-width: 4%;
+}
+
+.item-carousel{
+  display: flex;
+      gap: 30px;
+      transition: transform 0.4s ease;
+      padding: 20px 0;
+}
+/* Hides the scrollbar for Webkit browsers (Chrome, Safari) */
+.items-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.item-card p{
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.item-card {
+
+  flex: 0 0 calc(25% - 22.5px);
+  aspect-ratio: 1 / 1;
+  background: #1b2d5a;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+}
+
+.item-card img {
+  height: 150px;
+  margin: 0 auto 15px auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
+
+
+
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Default for very small screens (e.g., iPhone SE) - 1 item card */
+@media (max-width: 600px) {
+  .items-wrapper{
+    padding: 10px 10%;
+    justify-content: flex-start;
+   
+  }
+   
+    .arrow_wrap{
+      position: relative;
+    }
+    .item-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+        max-height: 220px;
+        margin: 0 auto;
+    }
+    .item-card img {
+        max-width: 70px;
+        max-height: 70px;
+    }
+    .arrow_wrap.left-arrow,
+    .arrow_wrap.right-arrow{
+      padding: 0;
+    }
+    
+   
+}

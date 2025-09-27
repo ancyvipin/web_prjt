@@ -1,0 +1,305 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+    flex-wrap: wrap;
+    padding: 1rem 5%;
+    position: relative;
+}
+body{
+     font-family: "Segoe UI", sans-serif;
+     margin: 0;
+     overflow-x: hidden;
+
+}
+.header-right{
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;  
+    justify-content: flex-end;
+    gap: 1rem;   /*sapce betveen nav and links */
+}
+.header img{
+width: 100px;
+height: auto;
+}
+nav a{
+    text-decoration: none;
+    margin-right: 0;
+    font-weight: 700;
+    color:#5C5C5C ;
+    white-space:nowrap;
+    padding: 0.5rem 1rem;
+}
+nav a.active{
+    color:#0074B9;
+    
+}
+.prdt_enquiry,
+.prdts_btn{
+    background: #1B2D5A;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 20px ;
+    box-shadow: 0px 8px 21px #0074B95C;
+    white-space: nowrap;
+}
+.section1_elements{
+    display: flex;
+    text-align: left;  
+    margin-left:5%;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.choose{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;   
+    padding-top: 10%;
+}
+.choose h1{
+    font-weight: 700;
+    font-size: clamp(2.5rem,5vw,4.25rem);
+    color:#1B2D5A;
+    margin-bottom: 1rem;
+}
+.choose p{
+color: #717171;
+ font-size: clamp(0.9rem, 2vw, 1.1rem); /* Responsive font size */
+    margin-bottom: 2rem; /* Space below paragraph */
+}
+.prdts_btn_div{
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+.section1_left_div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    align-items: flex-start;
+}
+.elipse_circle_img img{
+    float:right; 
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    object-fit: contain;
+}
+.stats-wrapper{
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px; 
+    margin-top: 2rem;
+    flex-wrap: wrap; 
+    padding-top: 10%;
+   
+}
+.stats-item{
+    text-align: left;
+    flex-shrink: 0;
+}
+.pic-stats{
+   
+    display: flex; 
+    align-items:center;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.pic-stats img{
+   width:25px;
+   height: auto;
+   margin-right: 8px;
+    
+}
+.pic-stats h2{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700; 
+    padding-bottom: 0;  
+    margin: 0;  
+}
+.stats-item p{
+    font-weight: 700;
+    font-size: clamp(00.95em,2vw,1.3rem);
+    padding: 0;
+    margin-top: 5px;
+    color:#717171;
+}
+
+
+
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none; /* Hidden by default, shown on small screens */
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+/* Show hamburger and hide nav on smaller screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .hamburger-menu {
+        display: block;
+    }
+     .header-right {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 100%; /* Position below the header */
+        right: 0;
+        background-color: #f9f9f9; /* Background for the dropdown menu */
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1; /* Ensure it's above other content */
+        padding: 1rem 0;
+        align-items: center; /* Center links in the dropdown */
+       
+        gap: 0.5rem; /* Smaller gap for vertical menu */
+    }
+
+    .header-right.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .header-right a {
+        width: 90%; /* Make links take up more width */
+        text-align: center;
+        border-bottom: 1px solid #eee; /* Separator for menu items */
+    }
+
+    .header-right a:last-child {
+        border-bottom: none; /* No border for the last item */
+    }
+
+    .prdt_enquiry {
+        width: calc(90% - 20px); /* Adjust width considering padding */
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width:600px) {
+     .header {
+        padding: 1rem 3%;
+        text-align: center;
+    }
+    .header img{
+        margin-bottom: 1rem;
+    }
+    .header-right{
+        justify-content: center;
+        width: 100%;
+    }
+    nav a{
+        margin: 0 0.5rem;
+    }
+    .section1_elements{
+        margin: 1.5rem 3%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0;
+    }
+    .section1_left_div{
+        align-items: center;
+        max-width: 100%;
+    }
+    .choose{
+        align-items: center;
+        justify-content: center;
+    }
+    .choose h1{
+        font-size: clamp(1.5rem, 6vw, 3.5rem );
+    }
+    choose p {
+        font-size: clamp(0.85rem, 2.5vw, 1rem); /* Adjust font size */
+        max-width: 90%; /* Limit paragraph width for readability */
+    }
+     .stats-wrapper {
+        justify-content: center; /* Center stats items */
+        gap: 20px; /* Reduce gap */
+    }
+
+    .stats-item {
+        text-align: center; /* Center text within stats item */
+    }
+    .pic-stats {
+        justify-content: center; /* Center icon and number */
+    }
+    .elipse_circle_img{
+        max-width: 100%;
+    }
+    
+}
+
+
+/* Smaller phones (480px and down) */
+@media (max-width: 480px) {
+    .header img {
+        width: 80px;
+    }
+
+    .header-right {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 0.5rem;
+    }
+
+    nav a {
+        margin: 0.25rem 0;
+    }
+
+    .prdt_enquiry {
+        margin-top: 1rem;
+    }
+
+    .section1_elements {
+        margin: 1rem 2%;
+    }
+
+    .choose h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .choose p {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+    }
+
+    .stats-wrapper {
+        flex-direction: column; /* Stack stats items vertically */
+        gap: 15px;
+    }
+
+    .pic-stats h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .stats-item p {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+
+    .elipse_circle_img img {
+        max-width: 90%; /* Adjust image size for very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

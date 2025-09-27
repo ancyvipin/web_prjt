@@ -1,0 +1,120 @@
+/* Footer Styles */
+.footer {
+    background-color: #F4F4F4; /* Dark footer background */
+    padding-top: 40px ;
+    position: relative;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: #717171;
+    max-width: 1200px;
+    margin-left: 80px;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    gap: 40px; /* Space between left and right sections */
+}
+
+
+.footer-left {
+    flex: 2; /* Takes more space */
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.footer-right {
+    flex: 1; /* Takes less space */
+    display: flex;
+    justify-content:flex-end; /* Space out link columns */
+    min-width: 500px;  
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.logo img {
+    max-width: 120px; /* Adjust logo size */
+    height: auto;
+}
+
+.description_div {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #717171;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 20px;
+    transition: color 0.3s;
+}
+.social-icons:hover {
+    color: #007bff; /* Example hover color */
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px; /* Space between link columns */
+}
+
+.link-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #1B2D5A;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 10px;
+}
+
+.link-column ul li a {
+    color: #1E2833;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.link-column ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+.copyright {
+    font-size: 0.8em;
+    color: white;
+    background-color: #1B2D5A;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   max-width: 100%;
+}
+.back-to-top {
+    background-color: #1B2D5A; /* Button background color */
+    color: #fff;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline for anchor */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker on hover */
+}

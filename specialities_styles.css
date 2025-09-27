@@ -1,0 +1,59 @@
+/*our specialities*/
+.our_specialities_h1 h1{
+    font-size: 30px;
+    font-weight: 700;
+   text-align: center;
+   padding-bottom: 0%;
+
+}
+ .our_specialities{
+    margin-left: 50px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.specialities-left,
+.specialities-right{
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 20px;
+}
+.specialities-left{
+    align-items: end;
+}
+.specialities-right{
+    align-items: start;
+}
+
+@media(max-width:600px){
+    .our_specialities_h1 h1{
+        font-size: 30px;
+        font-weight: 700;
+       text-align: center;
+       padding-bottom: 0%;
+    
+    }
+     .our_specialities{
+       
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .specialities-left,
+    .specialities-right{
+        display: flex;
+        gap: 80px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .specialities-left{
+        align-items: center;
+    }
+    .specialities-right{
+        align-items: center;
+    }
+}
