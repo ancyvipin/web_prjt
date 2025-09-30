@@ -5,6 +5,7 @@
     background: #fff;
     padding-left: 80px;
     padding-right: 80px;
+    font-family: "Segoe UI", sans-serif;
   }
   
   .test-header {
@@ -169,7 +170,7 @@
       right: auto;
     }
   
-    .test_arrow.left {
+    .test_arrow.right {
       right: -10px;
       left: auto;
     }

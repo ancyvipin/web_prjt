@@ -139,10 +139,9 @@
         margin: 0;
         gap: 0;
       }     
-      .footer-links{
+      
+      
+      .footer-right{
         align-items: flex-start;
-      }
-      .back-to-top{
-        width: 10px;
       }
 }
