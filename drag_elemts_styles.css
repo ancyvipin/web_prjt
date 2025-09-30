@@ -108,7 +108,7 @@
     margin: 0 auto;
   }
   .item-card img{
-    height: 60%;
+    height: 50%;
     padding: 10%;
     object-fit: contain;
   }
