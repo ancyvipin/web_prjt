@@ -1,51 +1,4 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Segoe UI", sans-serif;
-    flex-wrap: wrap;
-    padding: 1rem 5%;
-    position: relative;
-}
-body{
-     font-family: "Segoe UI", sans-serif;
-     margin: 0;
-     overflow-x: hidden;
 
-}
-.header-right{
-    display: flex;
-    align-items: center; 
-    flex-wrap: wrap;  
-    justify-content: flex-end;
-    gap: 1rem;   /*sapce betveen nav and links */
-}
-.header img{
-width: 100px;
-height: auto;
-}
-nav a{
-    text-decoration: none;
-    margin-right: 0;
-    font-weight: 700;
-    color:#5C5C5C ;
-    white-space:nowrap;
-    padding: 0.5rem 1rem;
-}
-nav a.active{
-    color:#0074B9;
-    
-}
-.prdt_enquiry,
-.prdts_btn{
-    background: #1B2D5A;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    padding: 10px 20px ;
-    box-shadow: 0px 8px 21px #0074B95C;
-    white-space: nowrap;
-}
 .section1_elements{
     display: flex;
     text-align: left;  
@@ -75,12 +28,9 @@ color: #717171;
     padding-bottom: 0;
 }
 .section1_left_div{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 600px;
-    width: 100%;
-    align-items: flex-start;
+    flex: 1;
+    max-width: 50%;
+    margin-top: 8%;
 }
 .elipse_circle_img img{
     float:right; 
@@ -135,71 +85,7 @@ color: #717171;
 
 
 
-/* Hamburger menu styles */
-.hamburger-menu {
-    display: none; /* Hidden by default, shown on small screens */
-    cursor: pointer;
-    font-size: 1.8rem;
-}
-
-/* Show hamburger and hide nav on smaller screens */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-    .hamburger-menu {
-        display: block;
-    }
-     .header-right {
-        display: none; /* Hide navigation links by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute;
-        top: 100%; /* Position below the header */
-        right: 0;
-        background-color: #f9f9f9; /* Background for the dropdown menu */
-        width: 100%;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1; /* Ensure it's above other content */
-        padding: 1rem 0;
-        align-items: center; /* Center links in the dropdown */
-       
-        gap: 0.5rem; /* Smaller gap for vertical menu */
-    }
-
-    .header-right.active {
-        display: flex; /* Show navigation when active */
-    }
-
-    .header-right a {
-        width: 90%; /* Make links take up more width */
-        text-align: center;
-        border-bottom: 1px solid #eee; /* Separator for menu items */
-    }
-
-    .header-right a:last-child {
-        border-bottom: none; /* No border for the last item */
-    }
-
-    .prdt_enquiry {
-        width: calc(90% - 20px); /* Adjust width considering padding */
-        text-align: center;
-    }
-}
-
-
-
-@media (max-width:600px) {
-     .header {
-        padding: 1rem 3%;
-        text-align: center;
-    }
-    .header img{
-        margin-bottom: 1rem;
-    }
-    .header-right{
-        justify-content: center;
-        width: 100%;
-    }
-    nav a{
-        margin: 0 0.5rem;
-    }
+@media (max-width:799px){
     .section1_elements{
         margin: 1.5rem 3%;
         flex-direction: column;
@@ -233,10 +119,39 @@ color: #717171;
         justify-content: center; /* Center icon and number */
     }
     .elipse_circle_img{
-        max-width: 100%;
+        max-width: 90%;
     }
     
 }
+
+
+@media (min-width: 800px) and (max-width: 1300px){
+    .section1_elements{
+        align-items: center;
+        margin-left: 0;
+        padding: 40px;
+        gap: 20px;
+    }
+    .elipse_circle_img{
+        flex: 1;
+        max-width: 100%;
+        min-height: 400px;
+        position: static;
+        margin: 0;
+        overflow: hidden;
+    }
+    .elipse_circle_img img{
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+
+
+
 
 
 /* Smaller phones (480px and down) */

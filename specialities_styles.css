@@ -3,36 +3,49 @@
     font-size: 30px;
     font-weight: 700;
    text-align: center;
-   padding-bottom: 0%;
+   padding-bottom: 0;
 
 }
  .our_specialities{
-    margin-left: 50px;
+    margin-left: 40px;
     display: flex; 
     align-items: center;
     justify-content: center;
 }
+.specialities-img{
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.specialities-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .specialities-left,
 .specialities-right{
     display: flex;
-    gap: 80px;
+    gap: 50px;
     flex-wrap: wrap;
     flex-direction: column;
     font-size: 20px;
+    justify-content: center;
+    flex: 1;
 }
 .specialities-left{
-    align-items: end;
+   text-align: right;
 }
 .specialities-right{
-    align-items: start;
+    text-align: left;
 }
 
-@media(max-width:600px){
+@media(max-width:799px){
     .our_specialities_h1 h1{
         font-size: 30px;
         font-weight: 700;
        text-align: center;
-       padding-bottom: 0%;
+       padding-bottom: 10px;
     
     }
      .our_specialities{
@@ -60,5 +73,11 @@
     }
     .specialities-right{
         align-items: center;
+    }
+}
+@media (min-width: 799px) and (max-width: 1300px) {
+    .specialities-img{
+        flex: 0 1 50%;
+       
     }
 }

@@ -2,15 +2,12 @@
  .healthier-home-section {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 60px;
-            padding: 0 5%;
-            padding-top: 80px;
+            justify-content: space-between;         
+            padding: 0 5% 0 40px;
+
         }
 
         .healthier-home-content {
-            
-            padding-right: 40px;
             flex: 1;
         }
 
@@ -24,6 +21,8 @@
             line-height: 1.7;
             margin-bottom: 30px;
            text-align: justify;
+           padding-right: 10%;
+           font-size: 1em;
 
         }
 
@@ -60,16 +59,17 @@
 
         .healthier-home-images {
             display: flex;
-            gap: 20px;
-            width: 100%;
-            max-width: 600px;
+            gap: 40px;
+            padding: 0;
+           flex: 1;
+           padding-left: 20px;
         }
         .healthier_img_left{
             flex: 2;
             
         }
         .healthier_img_right{
-            flex: 1;
+            flex: 3;
         }
         .healthier-home-images img {
             width: 100; /* Adjust for spacing */
@@ -84,16 +84,16 @@
 @media(max-width:600px ){
     .healthier-home-section{
         padding: 2% 3%;
-       flex-wrap: wrap;
-       justify-content: center;
+       flex-direction: column;
+       gap: 30px;
     }
     .healthier-home-content {
-        padding:5%;
-        padding-top: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .healthier-home-content h2 {
-        font-size: 2em;
+        font-size: 1.5em;
         margin-bottom: 20px;
         color: #1a2a46;
     }
@@ -127,6 +127,7 @@
         gap: 20px;
        padding-left: 0;
         flex-direction: column;
+        width: 100%;
     }
     .healthier_img_left,
     .healthier_img_right{
@@ -149,53 +150,74 @@
 
 }
 
-@media(min-width:601px){
-    .healthier-home-section{
-        display: flex;
-        padding: 2% 3%;
-        flex-wrap: nowrap;
-        flex-direction: row;
+@media (min-width: 601px) and (max-width: 850px) {
+    .healthier-home-section {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      gap: 30px;
+      padding: 30px;
     }
-    .healthier-home-content {
-        flex: 1;
-        padding:5%;
-        padding-top: 0;
-    }
-
-    .healthier-home-content h2 {
-        font-size: 2em;
-        
-    }
-
-    .healthier-home-content p {
-        line-height: 1.5em;
-       
-
-    }
-
-    .healthier-home-actions {
-        margin-bottom: 0;
-    }
-
   
-
-   
-    
-
+    .healthier-home-content {
+      flex: 1;
+      text-align: left;
+    }
+  
     .healthier-home-images {
-        display: flex;
-        gap: 20px;
-        width: 50%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .healthier-home-images .healthier_img_left {
+      flex: unset;
+    }
+    .healthier-home-images .healthier_img_left img {
+      height: 35vw;
+      object-fit: cover;
+      object-position: center;
+      height: 300px;
+      width: 100%;
+    }
+  
+    .healthier-home-images .healthier_img_right {
+      flex: 1;
+      object-fit: contain;
+    }
+    .healthier-home-images .healthier_img_right img {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  }
+@media (min-width: 851px) and (max-width: 1300px) {
+    .healthier-home-section{
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        max-width: 600px;
+        padding: 40px;
+    }
+    .healthier-home-content{
+        flex: 1;
+    }
+    .healthier-home-content p{
+        font-size: 1em ;
+    }
+    .healthier-home-images{
+        flex:1;
+        padding-left: 0;
     }
     .healthier_img_left{
         flex: 2;
-        
     }
     .healthier_img_right{
-        flex: 1;
+        flex: 3;
     }
+    
 
+    
 }
+

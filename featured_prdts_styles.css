@@ -38,6 +38,7 @@
     gap: 30px;
     transition: transform 0.4s ease;
     padding: 10px 0;
+    justify-content: space-around;
 }
 .prdt_card{
     flex: 0 0 calc(25% - 55px);
@@ -82,10 +83,7 @@
 
 @media(max-width:600px){
     
-    /* FIX 4: Correctly target the flex item for size and simplify padding */
-    .featured_prdts{
-        
-    }
+   
 
     .prdt_card{
        
