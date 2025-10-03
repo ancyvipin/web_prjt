@@ -1,12 +1,14 @@
 /* Testimonials Section */
 .testimonial-section {
     margin: 80px auto;
-    width: 90%;
+    width: 100%;
+    max-width: 100vw;
     background: #fff;
     padding-left: 80px;
     padding-right: 80px;
-    font-family: "Segoe UI", sans-serif;
+   box-sizing: border-box;
     position: relative;
+    overflow-x: hidden;
   }
   
   .test-header {
@@ -31,7 +33,7 @@
   
   .test-carousel-wrapper {
     overflow: hidden;
-    flex: 1;
+   width: 100%;
   }
   
   .test-carousel {
@@ -40,22 +42,22 @@
     transition: transform 0.4s ease;
     padding: 20px 0;
     align-items: stretch;
-    justify-content: space-around;
+    
   }
   
   .test-card {
-    flex: 0 0 calc(30.33% - 40px);
-    border-radius: 17.19px;
+    flex: 0 0 calc((100% - 60px)/3);
+    border-radius: 17px;
     background: #f1f1f1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: top;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
-    min-height: 240px;
-    min-width: 375px;
+    min-height: 233px;
+    height: auto;
+    box-sizing: border-box;
     text-align: left;
-    /* margin-right: 30px; */
   }
   
   .test-card img {
@@ -73,19 +75,15 @@
     font-weight: 700;
     color: #000;
     margin: 0;
-    text-align: left;
   }
   
   .test-card p {
     font-size: 15px;
     line-height: 22px;
     font-weight: 325;
-    letter-spacing: -3%;
+    letter-spacing: -0.03em;
     color: #555555;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin:30px 10px 20px 10px;
     flex-grow: 0.5;
     font-weight: 400;
   }
@@ -102,7 +100,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 0 10px white;  
+    box-shadow: 0 0 0 5px white;  
   } 
   
   .test_arrow:hover {
@@ -135,7 +133,7 @@
     .test-carousel {
       gap: 15px;
       padding: 10px 0;
-      padding-left: 10px;
+     
     }
   
     .test-card {
@@ -144,6 +142,7 @@
       min-width: unset;
       min-height: auto;
       text-align: center;
+      padding: 30px;
     }
   
     
@@ -158,25 +157,17 @@
     }
   
     .test_arrow {
-      background: #1b2d5a;
-      color: white;
-      border: none;
       width: 30px;
       height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   
     .test_arrow.left {
-      left: 0;
+      left: 10px;
       right: auto;
     }
   
     .test_arrow.right {
-      right: 0;
+      right: 10px;
       left: auto;
     }
   }

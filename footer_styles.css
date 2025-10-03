@@ -8,26 +8,28 @@
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 120px;
     color: #717171;
     max-width: 1200px;
-    margin-left: 80px;
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-    gap: 40px; /* Space between left and right sections */
+    margin: 0 auto;
+    padding: 40px 80px;
 }
 
-
 .footer-left {
-    flex: 2; /* Takes more space */
-    min-width: 200px;
-    max-width: 300px;
+    /* flex: 2;  */
+    flex: 0 0 350px;
+    min-width: 300px;
+    /* max-width: 300px; */
 }
 
 .footer-right {
-    flex: 1; /* Takes less space */
-    display: flex;
-    justify-content:flex-end; /* Space out link columns */
-    min-width: 200px;
+    /* flex: 1;  */
+    flex: 1 1 auto;
+   display: flex;
+   justify-content: flex-start;
+   /* justify-content: flex-end; */
+    /*min-width: 200px; */
     
 }
 
@@ -96,9 +98,9 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    max-width: 100%;
-    min-height: 10%;
-    padding:10px ;
+    width: 100%;
+    min-height: 40px;
+    padding:10px 0 ;
 }
 .back-to-top {
     background-color: #1B2D5A; /* Button background color */
@@ -121,7 +123,7 @@
 .back-to-top:hover {
     background-color: #0056b3; /* Darker on hover */
 }
-@media(max-width:819px){
+/* @media(max-width:819px)and (min-width:1300px){
     .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -162,4 +164,97 @@
         font-size: 0.8em;
       }
     
+} */
+
+/* REFINED MEDIA QUERY FOR TABLET LANDSCAPE & LARGER DEVICES (1025px and up) */
+/* This is your standard desktop view, but we'll ensure the content is centered */
+
+
+
+/* REFINED MEDIA QUERY FOR MOST TABLETS (768px to 1024px, including iPad Air/Mini/Pro) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer-content {
+        /* Allow content to span the full width of the tablet */
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 20px; /* Good padding for tablet edges */
+        /* Keep the flex layout (left/right side-by-side) */
+         gap: 20px; 
+         justify-content: flex-start; 
+         flex-wrap: wrap;
+    }
+
+    .footer-left {
+        /* Give the logo/description area a solid chunk of space */
+        flex: 1 1 300px; 
+        min-width: 250px; /* Ensure it doesn't get too squished */
+      
+    }
+
+    .footer-right {
+        /* Let the links use the remaining space */
+        flex: 1 1 300px; 
+        justify-content: flex-start;
+        min-width: 200px;
+    }
+
+    .footer-links {
+        /* Adjust spacing between Home and Links columns */
+        gap: 30px; 
+        /* flex-wrap: wrap; */
+    }
+    .back-to-top{
+        right: 20px;
+    }
+}
+
+/* REFINED MEDIA QUERY FOR MOBILE AND SMALLER TABLET PORTRAIT (< 768px) */
+/* The layout will stack vertically here */
+@media screen and (max-width: 767px) {
+    .footer-content {
+        flex-direction: column; /* Stack vertically */
+        align-items: flex-start; /* Center content horizontally */
+        margin: 0;
+        padding: 30px 20px 20px 20px;
+        text-align: left;
+        gap: 0;
+    }
+
+    .footer-left,
+    .footer-right {
+        max-width: 100%; 
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .social-icons {
+        justify-content: flex-start; /* Center the social icons */
+        padding-bottom: 30px;
+    }
+    
+
+    .footer-links {
+        flex-direction: row; /* 👈 CHANGE: Make link columns sit side-by-side */
+        justify-content: space-between; /* Space out the 'Home' and 'Links' columns */
+        gap: 20px;
+        width: 100%;
+        padding-top: 10px;
+    }
+    
+    .link-column {
+        width: 45%; /* Give space for link columns to sit next to each other */
+        text-align: left; /* 👈 CHANGE: Keep link titles/list left-aligned */
+    }
+    
+    /* Remove the horizontal link list styling (it's better to keep links vertical on mobile) */
+    .link-column ul {
+        display: block; /* 👈 CHANGE: Set back to default vertical list */
+        justify-content: flex-start;
+        gap: 0;
+        margin-top: 10px;
+    }
+    .link-column ul li {
+        margin-bottom: 5px;
+    }
+
 }
